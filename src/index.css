@@ -36,7 +36,6 @@ code {
   width: 250px;
   margin: 0.5rem;
   cursor: pointer;
-  ;
 }
 .movie img{
   object-fit: cover;
