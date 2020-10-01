@@ -6,49 +6,6 @@ import Routes from './Routes';
 
 function App() {
 
-  // const [movies, setMovies] = useState([]);
-  // const [searchTerm, setSearchTerm] = useState("");
-  // const [firstTime, setFirstTime] = useState(true);
-  // const [curPage, setCurPage] = useState(1);
-  // const [totalPage, setTotalPage] = useState(0);
-
-  // useEffect(() => {
-  //   if(firstTime) {
-  //     fetMovies();
-  //   }
-  // },[firstTime]);
-
-  // const fetMovies = async () => {
-  //  await fetch(FEATURED_API_LIST).then(reps => reps.json())
-  //   .then(data => {
-  //     console.log(data);
-  //     setMovies(data.results);
-  //     setFirstTime(false);
-  //     // setCurPage(data.page);
-  //     // setTotalPage(data.total_pages)
-  //   }).catch(error => console.log(error));
-  // }
-
-  // const handleOnSubmit = (e) => {
-  //   e.preventDefault();
-
-  //   if(!searchTerm) {
-  //     fetMovies();
-  //     return
-  //   };
-    
-  //   fetch(SEARCH_API+searchTerm)
-  //   .then(res => res.json())
-  //   .then(data => {
-  //       console.log(data);
-  //       setMovies(data.results);
-  //   });
-  // }
-
-  // const handleOnChange = e => {
-  //   setSearchTerm(e.target.value);
-  // }
-
   return (
       <>
         <Routes />
