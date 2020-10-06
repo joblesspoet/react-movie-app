@@ -16,13 +16,12 @@ function Movies() {
   useEffect(() => {
     if(firstTime) {
       fetMovies();
-    }
-    
+    } 
   },[firstTime]);
 
   useEffect(()=>{
     if(!firstTime){
-      if(searchTerm != "" && searchTerm.length > 3) {
+      if(searchTerm !== "" && searchTerm.length > 3) {
         searchMovies()
       } else {
         fetMovies();

@@ -17,7 +17,7 @@ function Movie(props) {
         }
     }
 
-    const img_path = props.movie.poster_path != undefined ? IMG_API+props.movie.poster_path : "https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg";
+    const img_path = props.movie.poster_path !== undefined ? IMG_API+props.movie.poster_path : "https://www.publicdomainpictures.net/pictures/280000/velka/not-found-image-15383864787lu.jpg";
     return (
         <div className="movie">
             <Link to={`/movie-detail/${props.movie.id}`} >

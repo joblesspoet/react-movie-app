@@ -24,12 +24,12 @@ function MovieDetail() {
                 setMovieInfo(movie)
             }
             
-            console.log(movieInfo)
+            // console.log(movieInfo)
         }, error => console.log(error))
     }, [])
 
     return (
-        <div>
+        <>
             {
                 (movieInfo === undefined && (
                     <h3>No movie found</h3>
@@ -37,14 +37,23 @@ function MovieDetail() {
             }
             {
                 movieInfo !== undefined && (
-                    <div className="movie-container">
+                    <div className="movie-detail-container">
                         <div className="movie-detail-img">
                             <img src={IMG_API + movieInfo.poster_path} alt={movieInfo.title} />
+                        </div>
+                        <div className="movie-detail-info">
+                            <h2>{movieInfo.title}</h2>
+                            <p>{movieInfo.tagline}</p>
+                            <div className="movie-overview">
+                                <h3>Overview</h3>
+                                <p>{movieInfo.overview}</p>
+                            </div>
+                            <p>Release Date: {movieInfo.release_date}</p>
                         </div>
                     </div>
                 )
             }        
-        </div>
+        </>
     )
 }
 

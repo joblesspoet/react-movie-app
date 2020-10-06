@@ -154,3 +154,44 @@ li.active{
 li:focus{
   outline: 0;
 }
+
+.movie-detail-container{
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
+}
+.movie-detail-img{
+  background-color: #373b69;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  margin: 0.5rem;
+}
+.movie-detail-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.movie-detail-info {
+  display: inline-block;
+  margin-top: 5rem;
+  margin-left: 3rem;
+}
+.movie-detail-info h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  width: 100%;
+}
+.movie-detail-info p {
+  color: #fff;
+}
+
+.movie-overview {
+  margin-bottom: 20px;
+}
+.movie-overview h3{
+  margin: 40px 0 8px 0;
+  color: #fff;
+}
