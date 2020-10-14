@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 import Movies from './components/Movies'
+import Home from './components/Home';
 import MovieDetail from './components/MovieDetail';
 
 export default function Routes() {
@@ -13,6 +14,9 @@ export default function Routes() {
     <Router>
       <Switch>
         <Route exact path='/'>
+          <Home />
+        </Route>
+        <Route exact path='/movies'>
           <Movies />
         </Route>
         <Route path='/movie-detail/:movieId'>

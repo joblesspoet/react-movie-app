@@ -1,38 +1,197 @@
-.App {
-  text-align: center;
+* {
+  padding: 0;
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: #373b69; */
+  /* columns: #ffffff; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.root{
   display: flex;
   flex-direction: column;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.movie-container{
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+}
+.movie{
+  /* color: #ffffff; */
+  background-color: #373b69;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  width: 250px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+.movie img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.movie-info {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
 }
 
-.App-link {
-  color: #61dafb;
+.movie-info h3 {
+  margin: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movie-info span {
+  color: #fff;
+  background-color: black;
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 0.25rem 0.5rem;
+}
+.movie-info span.green {
+  color: rgb(39, 189, 39);
+}
+
+.movie-info span.orange {
+  color: orange;
+}
+
+.movie-info span.red {
+  color: rgb(189, 42, 42);
+}
+
+.movie-over {
+  background-color: #fff;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  color: #22254b;
+  padding: 1rem;
+  position: absolute;
+  max-height: 100%;
+  overflow: auto;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transform: translateY(102%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.overview h3 {
+  margin-top: 0;
+}
+
+.movie:hover .movie-over {
+  transform: translateY(0);
+}
+
+header{
+  /* background-color: #373b69; */
+  display: flex;
+  /* padding: 1rem; */
+  /* justify-content: flex-end; */
+}
+.search{
+  background-color: transparent;
+  font-family: inherit;
+  border: 2px solid #22254b;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+}
+.search:focus{
+  outline: 0;
+}
+.search::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+.search:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #fff;
+}
+
+.search::-ms-input-placeholder { /* Microsoft Edge */
+  color: #fff;
+}
+.pagination{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+ul {
+  display: inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #fff;
+}
+li {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+li.active{
+  font-weight: bold;
+  font-size: medium;
+}
+li:focus{
+  outline: 0;
+}
+
+.movie-detail-container{
+  display: flex;
+  flex-direction: row;
+  margin: 0.5rem;
+}
+.movie-detail-img{
+  background-color: #373b69;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  overflow: hidden;
+  position: relative;
+  width: 300px;
+  margin: 0.5rem;
+}
+.movie-detail-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.movie-detail-info {
+  display: inline-block;
+  margin-top: 5rem;
+  margin-left: 3rem;
+}
+.movie-detail-info h2 {
+  color: #fff;
+  font-size: 2.2rem;
+  width: 100%;
+}
+.movie-detail-info p {
+  color: #fff;
+}
+
+.movie-overview {
+  margin-bottom: 20px;
+}
+.movie-overview h3{
+  margin: 40px 0 8px 0;
+  color: #fff;
 }

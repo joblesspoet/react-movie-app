@@ -9,8 +9,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #373b69;
-  columns: #ffffff;
+  /* background-color: #373b69; */
+  /* columns: #ffffff; */
+}
+.App {
+  background-color: #111111;
 }
 .root{
   display: flex;
@@ -101,10 +104,10 @@ code {
 }
 
 header{
-  background-color: #373b69;
+  /* background-color: #373b69; */
   display: flex;
-  padding: 1rem;
-  justify-content: flex-end;
+  /* padding: 1rem; */
+  /* justify-content: flex-end; */
 }
 .search{
   background-color: transparent;
